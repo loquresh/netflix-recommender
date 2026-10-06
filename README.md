@@ -48,9 +48,13 @@ The final model achieved an **RMSE of 0.503** when comparing the predicted ratin
 
 K-Means identified three groups of movies based on similarities in their user rating patterns. The cluster assignments provide a way to explore whether movies with similar rating behavior tend to group together.
 
+![K-Means](visuals/netflix-rec-k.png)
+
 ### 3. PCA Visualization
 
 The PCA plot provides a two-dimensional view of the movie rating patterns and allows the K-Means clusters to be visually compared. Movies that appear closer together have more similar patterns in the dimensions captured by the PCA visualization.
+
+![PCA](visuals/netflix-rec-pca.png)
 
 ## Tools
 
