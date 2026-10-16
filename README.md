@@ -1,20 +1,17 @@
 # Netflix Movie Rating Analysis
 
-## Overview
+A recommender-style analysis of a sparse user-by-movie rating matrix. Matrix factorization fills in the missing ratings, and K-Means clustering with PCA then groups movies by how users rate them. Built in Python with NumPy, scikit-learn, and SciPy.
 
-This project analyzes a sparse movie rating matrix using matrix factorization, K-Means clustering, and principal component analysis (PCA). The goal is to predict missing movie ratings and explore groups of movies with similar rating patterns.
+## Key Results
 
-## Project Questions
-
-* How well can matrix factorization predict missing movie ratings?
-* Can movies be grouped based on similarities in user rating patterns?
-* How do these movie clusters appear when visualized using PCA?
+- **Prediction:** The factorization model (3 latent factors) predicted missing ratings with an RMSE of 0.503 on the 1 to 5 scale, evaluated against a complete version of the matrix.
+- **Clustering:** K-Means grouped movies into three clusters based on user rating patterns, with k chosen using the elbow method and visualized in two dimensions with PCA.
 
 ## Data Source
 
 [Netflix Movie Ratings](https://www.kaggle.com/datasets/luisheitorribeiro/netflix-movie-ratings) — Kaggle
 
-The dataset contains an incomplete user-by-movie rating matrix along with a complete version used to evaluate the predictions. Ratings range from 1 to 5, with missing ratings represented by 0 in the incomplete matrix.
+_The dataset contains an incomplete user-by-movie rating matrix along with a complete version used to evaluate the predictions. Ratings range from 1 to 5, with missing ratings represented by 0 in the incomplete matrix._
 
 ## Methodology
 
@@ -24,9 +21,9 @@ Matrix factorization was used to estimate missing ratings in the incomplete rati
 
 The model was trained using:
 
-* Rank: 3 latent factors
-* Regularization parameter: 0.001
-* Maximum iterations: 10
+* **Rank:** 3 latent factors
+* **Regularization parameter:** 0.001
+* **Maximum iterations:** 10
 
 ### 2. Movie Clustering
 
